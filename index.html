@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>1 an dans le Kube</h1>
+            <p>(à peu prêt)</p>
+            <small>Jean-Baptiste Dusseaut
+                <a href="https://twitter.com/bodysplash">@bodysplash</a>
+            </small>
+        </section>
+        <section>
+            <section>
+                <h2>
+                    <p>
+                        <a href="http://arpinum.fr"><img src="img/logo_arpinum_clair_baseline.png"/></a>
+                    </p>
+                    <p>
+                        <a href="https://jamshake.com"><img src="img/logo-jam-retina.png" alt=""></a>
+                    </p>
+
+                </h2>
+                
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Attention</h1>
+                <img src="img/classe.jpg" alt="">
+                <p>Je ne suis pas…</p>
+            </section>
+            <section>
+                <ul>
+                    <li>DevOps</li>
+                    <li>Passionné d'infra</li>
+                    <li>Expert linux</li>
+                    <li>Tout ça</li>
+                </ul>
+            </section>
+            <section>
+                <img src="img/netflix.png" alt="">
+            </section>
+            <section>
+                <ul>
+                    <li>eXtreme Programmer</li>
+                    <li>Domain Driven Design</li>
+                </ul>
+            </section>
+        </section>
+        <section data-background-video="https://jamshake-itg.arpinum.fr/vid/jamshake%20-%20libere%20ta%20creativite.mp4", data-background-video-loop="true">
+            <img src="img/logo-jam-retina.png" alt="">
+        </section>
+        <section>
+            <section>
+                <h1>
+                    <p>IaaS</p>
+                    <p>VS</p>
+                    <p>PaaS</p>
+                </h1>
+                <aside class="notes">
+                    Le PaaS limite trop les options
+                </aside>
+            </section>
+            <section data-background="img/gandalf.jpg">
+                <h1>You shall not PaaS!</h1>
+            </section>
+            <section>
+                <h2>Rend le facile trivial, le difficile impossible</h2>
+            </section>
+            <section>
+                <ul>
+                    <li>Encourage un monolithe</li>
+                    <li>Ferme pas mal d'options</li>
+                </ul>
+            </section>
+        </section>
+        <section data-background="img/jamshake_archi.png">
+
+        </section>
+        <section>
+            <section>
+                <h1>V1</h1>
+                <h2>
+                    AWS + Ansible + Docker
+                </h2>
+            </section>
+            <section>
+                <ul>
+                    <li>L'horreur de faire un </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section data-background="img/new_hope.jpg">
+                <h1>CaaS</h1>
+                <p>A new hope</p>
+            </section>
+        </section>
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dhW1j-5SbCI" frameborder="0" allowfullscreen data-autoplay=""></iframe>
+        </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
