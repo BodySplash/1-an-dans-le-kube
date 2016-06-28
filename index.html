@@ -42,7 +42,7 @@
                     </p>
 
                 </h2>
-                
+
             </section>
         </section>
         <section>
@@ -56,22 +56,44 @@
                     <li>DevOps</li>
                     <li>Passionné d'infra</li>
                     <li>Expert linux</li>
-                    <li>Tout ça</li>
+                    <li>Amoureux de la technique pour la technique</li>
                 </ul>
             </section>
             <section>
                 <img src="img/netflix.png" alt="">
             </section>
             <section>
+                <p>J'aime</p>
                 <ul>
-                    <li>eXtreme Programmer</li>
-                    <li>Domain Driven Design</li>
+                    <li>Le code propre, au service du produit</li>
+                    <li>Me concentrer sur la complexité essentielle et pas accidentelle</li>
+                    <li>La bière</li>
+                    <li>le Domain Driven Design</li>
+                    <li>Garder des options ouvertes</li>
                 </ul>
             </section>
         </section>
-        <section data-background-video="https://jamshake-itg.arpinum.fr/vid/jamshake%20-%20libere%20ta%20creativite.mp4", data-background-video-loop="true">
+        <section data-background-video="https://jamshake-itg.arpinum.fr/vid/jamshake%20-%20libere%20ta%20creativite.mp4"
+                 , data-background-video-loop="true">
             <img src="img/logo-jam-retina.png" alt="">
         </section>
+        <section data-background="img/four_horsemen2.jpg">
+            <h2>Complexité</h2>
+            <ul>
+                <li>Etats</li>
+                <li>Interdépendances</li>
+                <li>Incertitudes</li>
+                <li>Irréversabilité</li>
+            </ul>
+            <p>Professor Enrico Zaninotto</p>
+            <small>Via <a
+                    href="https://www.facebook.com/notes/kent-beck/taming-complexity-with-reversibility/1000330413333156/">Kent
+                Beck</a></small>
+        </section>
+        <section data-background="img/jamshake_archi.png">
+
+        </section>
+
         <section>
             <section>
                 <h1>
@@ -92,12 +114,10 @@
             <section>
                 <ul>
                     <li>Encourage un monolithe</li>
-                    <li>Ferme pas mal d'options</li>
+                    <li>Ferme des options</li>
+                    <li>Couplage avec le fournisseur</li>
                 </ul>
             </section>
-        </section>
-        <section data-background="img/jamshake_archi.png">
-
         </section>
         <section>
             <section>
@@ -106,22 +126,175 @@
                     AWS + Ansible + Docker
                 </h2>
             </section>
-            <section>
+            <section data-background="img/docker.png">
+                <h3>Pourquoi Docker</h3>
                 <ul>
-                    <li>L'horreur de faire un </li>
+                    <li>Réversabilité!</li>
+                    <li>Réduction de l'effet "Snowflakes"</li>
+                    <li>Construire son infra sur le poste de dev</li>
+                    <li>Monter un environnement pour les intégrateurs</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Pourquoi AWS et Ansible</h2>
+            </section>
+            <section data-background="img/m.jpg">
+                <iframe src="https://www.jamshake.com/embed/6270b2a1-1b3f-443b-94c2-1eeff93fd0e7" frameborder="0" width="300" height="300"></iframe>
+            </section>
+            <section>
+                <h2>Gruuuuu</h2>
+                <p>Offre Docker basé sur leurs propres outils :</p>
+                <ul class="fragment">
+                    <li>difficile de migrer</li>
+                    <li>LE PRIX !!!</li>
                 </ul>
             </section>
         </section>
         <section>
             <section data-background="img/new_hope.jpg">
-                <h1>CaaS</h1>
+                <h1>Kubernetes : CaaS</h1>
                 <p>A new hope</p>
+            </section>
+            <section>
+                <h1>Single Responsability Principle</h1>
+                <p>Je ne gère plus des serveurs mais ensemble de containers</p>
+                <p>Cette abstraction ne fuit pas</p>
+            </section>
+            <section>
+                <h2>L'exploitation a son "Bounded Context"</h2>
+                <ul>
+                    <li>Service</li>
+                    <li>Replication Controller</li>
+                    <li>Pod</li>
+                    <li>...</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Simple n'est pas simpliste : complexité essentiel</li>
+                    <li>Service discovery == Bounded contexts open bar</li>
+                    <li>Open Source</li>
+                    <li>Bonus : Rolling Update, fault tolerance...</li>
+                </ul>
             </section>
         </section>
         <section>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dhW1j-5SbCI" frameborder="0" allowfullscreen data-autoplay=""></iframe>
+            <section data-background="img/google_cloud_platform.png">
+                <img src="img/kube7-logo.png" alt="">
+            </section>
+            <section>
+                <ul>
+                    <li>Master "Gratuit"</li>
+                    <li>Quasi rien à configurer sur le cluster</li>
+                    <li>Transparent : groupe d'instances + Master</li>
+                    <li>(mais faite attentions aux ips)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Etape 1 : les descripteurs</h2>
+                <ul>
+                    <li>Verbeux tout de même</li>
+                    <li>tags WTF</li>
+                    <li>Quelques cas tordus : ZooKeeper</li>
+                    <li>On utilise toujours Ansible</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Etape 2 : la taille</h2>
+                <ul>
+                    <li>Ne pas dépasser les 5 noeuds</li>
+                    <li>Chaque nouveau node doit nous faire tenir longtemps</li>
+                    <li>N+1 nodes</li>
+                    <li>ATTENTION : kube consomme ( peut se lire "ne jamais tenter de monter un cluster avec des
+                        small")
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Etape 3 : je mets quoi dedans</h2>
+                <p>Indices</p>
+                <ul>
+                    <li>Pas votre base</li>
+                    <li>Pas votre intégration continue</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Etape 4 : Intégration continue </h2>
+                <ul>
+                    <li>Registry ?</li>
+                    <li>Namespaces</li>
+                    <li>Drone</li>
+                    <li>Ou wercker ?</li>
+                    <li>Taille des images</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Etape surprise</h2>
+                <p>Alpine et Kubernetes sont dans un bateau</p>
+            </section>
+            <section>
+                <h2>Exploitation</h2>
+                <ul>
+                    <li>Logs aggrégés</li>
+                    <li>Stackdriver</li>
+                    <li>Mise à jour des clusters</li>
+                    <li>Noeuds qui partent en cacahuète</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Et ensuite...</h1>
+            </section>
+            <section>
+                <p>Ca va limite plus vite que l'écosytème JS...</p>
+            </section>
+            <section>
+                <p>Mais:</p>
+                <ul>
+                    <li>Kubernetes avance vite (ingress, autoscaler, taille de node multiples...)</li>
+                    <li>Helm</li>
+                    <li>Deis</li>
+                </ul>
+            </section>
+            <section data-background="img/four_horsemen2.jpg">
+                <h2>Complexité</h2>
+                <ul>
+                    <li>Etats</li>
+                    <li>Interdépendances</li>
+                    <li>Incertitudes</li>
+                    <li>Irréversabilité</li>
+                </ul>
+                <p>Professor Enrico Zaninotto</p>
+                <small>Via <a
+                        href="https://www.facebook.com/notes/kent-beck/taming-complexity-with-reversibility/1000330413333156/">Kent
+                    Beck</a></small>
+            </section>
+            <section>
+                <p>Du coup...</p>
+                <ul>
+                    <li>scoop.immo</li>
+                    <li>foodivarius</li>
+                    <li>preveasy</li>
+                    <li>poool</li>
+                    <li>groupe sud-ouest</li>
+                    <li>...</li>
+                </ul>
+            </section>
         </section>
 
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dhW1j-5SbCI" frameborder="0"
+                    allowfullscreen data-autoplay=""></iframe>
+        </section>
+        <aside class="notes">
+
+
+            L'avenir : DEIS HELM
+            Concurrence : swarm fleet
+
+            intégration continue
+        </aside>
     </div>
 </div>
 
