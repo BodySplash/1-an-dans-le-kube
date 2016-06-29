@@ -26,7 +26,7 @@
     <div class="slides">
         <section data-background="img/cube.jpg">
             <h1>1 an dans le Kube</h1>
-            <p>(à peu prêt)</p>
+            <p>(à peu près)</p>
             <small>Jean-Baptiste Dusseaut
                 <a href="https://twitter.com/bodysplash">@bodysplash</a>
             </small>
@@ -68,7 +68,7 @@
                     <li>Le code propre, au service du produit</li>
                     <li>Me concentrer sur la complexité essentielle et pas accidentelle</li>
                     <li>La bière</li>
-                    <li>le Domain Driven Design</li>
+                    <li>Le Domain Driven Design</li>
                     <li>Garder des options ouvertes</li>
                 </ul>
             </section>
@@ -80,7 +80,7 @@
         <section data-background="img/four_horsemen2.jpg">
             <h2>Complexité</h2>
             <ul>
-                <li>Etats</li>
+                <li>États</li>
                 <li>Interdépendances</li>
                 <li>Incertitudes</li>
                 <li>Irréversabilité</li>
@@ -144,9 +144,9 @@
             <section data-background="http://i.giphy.com/3o6gEgkb5xqAyMw5Og.gif">
                 <div class="fragment">
                     <h2>Gruuuuu</h2>
-                    <p>Offre Docker basé sur leurs propres outils :</p>
+                    <p>Offre Docker basée sur leurs propres outils :</p>
                     <ul class="fragment">
-                        <li>difficile de migrer</li>
+                        <li>Difficile de migrer</li>
                         <li>LE PRIX !!!</li>
                     </ul>
                 </div>
@@ -159,7 +159,7 @@
             </section>
             <section>
                 <h1>Single Responsability Principle</h1>
-                <p>Je ne gère plus des serveurs mais ensemble de containers</p>
+                <p>Je ne gère plus des serveurs mais un ensemble de containers</p>
                 <p>Cette abstraction ne fuit pas</p>
             </section>
             <section>
@@ -173,7 +173,7 @@
             </section>
             <section>
                 <ul>
-                    <li>Simple n'est pas simpliste : complexité essentiel</li>
+                    <li>Simple n'est pas simpliste : complexité essentielle</li>
                     <li>Service discovery == Bounded contexts open bar</li>
                     <li>Open Source</li>
                     <li>Bonus : Rolling Update, fault tolerance...</li>
@@ -193,27 +193,27 @@
                 </ul>
             </section>
             <section>
-                <h2>Etape 1 : les descripteurs</h2>
+                <h2>Étape 1 : Les descripteurs</h2>
                 <ul>
                     <li>Verbeux tout de même</li>
-                    <li>tags WTF</li>
+                    <li>Tags WTF</li>
                     <li>Quelques cas tordus : ZooKeeper</li>
                     <li>On utilise toujours Ansible</li>
                 </ul>
             </section>
             <section>
-                <h2>Etape 2 : la taille</h2>
+                <h2>Étape 2 : La taille</h2>
                 <ul>
-                    <li>Ne pas dépasser les 5 noeuds</li>
+                    <li>Ne pas dépasser les 5 nœuds</li>
                     <li>Chaque nouveau node doit nous faire tenir longtemps</li>
                     <li>N+1 nodes</li>
-                    <li>ATTENTION : kube consomme ( peut se lire "ne jamais tenter de monter un cluster avec des
+                    <li>ATTENTION : kube consomme (peut se lire "ne jamais tenter de monter un cluster avec des
                         micros")
                     </li>
                 </ul>
             </section>
             <section>
-                <h2>Etape 3 : je mets quoi dedans</h2>
+                <h2>Étape 3 : Je mets quoi dedans</h2>
                 <p>Indices</p>
                 <ul>
                     <li>Pas votre base</li>
@@ -221,7 +221,7 @@
                 </ul>
             </section>
             <section>
-                <h2>Etape 4 : Intégration continue </h2>
+                <h2>Étape 4 : Intégration continue </h2>
                 <ul>
                     <li>Registry ?</li>
                     <li>Namespaces</li>
@@ -231,7 +231,7 @@
                 </ul>
             </section>
             <section data-background="http://i.giphy.com/10CQOoOrvfpgbe.gif">
-                <h2>Etape surprise</h2>
+                <h2>Étape surprise</h2>
                 <p>Alpine et Kubernetes sont dans un bateau</p>
             </section>
             <section>
@@ -240,7 +240,7 @@
                     <li>Logs aggrégés</li>
                     <li>Stackdriver</li>
                     <li>Mise à jour des clusters</li>
-                    <li>Noeuds qui partent en cacahuète</li>
+                    <li>Nœuds qui partent en cacahuète</li>
                 </ul>
             </section>
         </section>
@@ -249,10 +249,10 @@
                 <h1>Et ensuite...</h1>
             </section>
             <section>
-                <p>Ca va limite plus vite que l'écosytème JS...</p>
+                <p>Ça va limite plus vite que l'écosytème JS...</p>
             </section>
             <section>
-                <p>Mais:</p>
+                <p>Mais :</p>
                 <ul>
                     <li>Kubernetes avance vite (ingress, autoscaler, taille de node multiples...)</li>
                     <li>Helm</li>
@@ -262,7 +262,7 @@
             <section data-background="img/four_horsemen2.jpg">
                 <h2>Complexité</h2>
                 <ul>
-                    <li>Etats</li>
+                    <li>États</li>
                     <li>Interdépendances</li>
                     <li>Incertitudes</li>
                     <li>Irréversabilité</li>
